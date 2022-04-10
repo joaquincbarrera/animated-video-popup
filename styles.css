@@ -16,6 +16,12 @@ body {
 
 .btn {
   position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .btn .play {
@@ -23,4 +29,35 @@ body {
   width: 80px;
   height: 80px;
   background: #f42e79;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 15px 25px #f42e79;
+  transition: 0.5s;
+}
+
+.btn.active .play {
+  box-shadow: 0 0 0 150vh #f42e79;
+}
+
+.btn .play::before {
+  content: '';
+  position: absolute;
+  border: 25px solid #fff;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 0px solid transparent;
+  transform: translateX(5px);
+}
+
+.btn p {
+  font-weight: 500;
+  font-size: 1em;
+  color: #888;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
 }
